@@ -698,6 +698,54 @@ a { text-decoration: none; }
   to   { opacity: 1; transform: translateY(0); }
 }
 
+/* ── Lightbox / Image Modal ── */
+.image-modal {
+  position: fixed; inset: 0; z-index: 1000;
+  background: rgba(0,0,0,0.94);
+  display: flex; align-items: center; justify-content: center;
+  animation: fadeIn 0.3s ease;
+}
+.image-modal .im-img {
+  max-width: 88%; max-height: 86%;
+  border-radius: 8px; object-fit: contain;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+.image-modal .im-close {
+  position: absolute; top: 18px; right: 20px;
+  width: 46px; height: 46px;
+  background: rgba(255,255,255,0.1); color: #fff;
+  border: 1px solid rgba(255,255,255,0.25); border-radius: 50%;
+  font-size: 1.7rem; line-height: 1; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.25s, transform 0.25s; z-index: 2;
+}
+.image-modal .im-close:hover { background: var(--gold); color: var(--teal-deep); transform: rotate(90deg); }
+.image-modal .im-nav {
+  position: absolute; top: 50%; transform: translateY(-50%);
+  width: 52px; height: 52px;
+  background: rgba(255,255,255,0.08); color: #fff;
+  border: 1px solid rgba(255,255,255,0.22); border-radius: 50%;
+  font-size: 1.3rem; cursor: pointer; z-index: 2;
+  display: flex; align-items: center; justify-content: center;
+  transition: background 0.25s;
+}
+.image-modal .im-nav:hover { background: var(--gold); color: var(--teal-deep); }
+.image-modal .im-prev { left: 24px; }
+.image-modal .im-next { right: 24px; }
+.image-modal .im-counter {
+  position: absolute; bottom: 24px; left: 50%; transform: translateX(-50%);
+  color: rgba(255,255,255,0.85); font-family: 'DM Sans', sans-serif;
+  font-size: 0.82rem; letter-spacing: 0.1em;
+  background: rgba(0,0,0,0.4); padding: 6px 16px; border-radius: 50px;
+}
+@media (max-width: 600px) {
+  .image-modal .im-img { max-width: 94%; max-height: 80%; }
+  .image-modal .im-close { top: 12px; right: 12px; width: 42px; height: 42px; }
+  .image-modal .im-nav { width: 44px; height: 44px; }
+  .image-modal .im-prev { left: 10px; }
+  .image-modal .im-next { right: 10px; }
+}
+
 /* See More button */
 .gallery-more-wrap { text-align: center; margin-top: 28px; position: relative; z-index: 1; }
 .gallery-more-btn {
@@ -1035,27 +1083,21 @@ a { text-decoration: none; }
   .google-summary { padding: 24px 28px; gap: 28px; }
 }
 @media (max-width: 768px) {
-  .google-summary { flex-direction: column; align-items: flex-start; gap: 20px; }
+  .google-summary { flex-direction: column; align-items: center; text-align: center; gap: 22px; }
   .google-summary-divider { display: none; }
-  .google-summary-left { width: 100%; }
-  .google-summary-right { width: 100%; }
+  .google-summary-left { width: 100%; justify-content: center; }
+  .google-summary-right { width: 100%; max-width: 360px; }
 }
 @media (max-width: 600px) {
   .reviews-section { padding: 56px 16px; }
   .reviews-grid { grid-template-columns: 1fr; gap: 14px; }
-  .google-summary { padding: 20px; }
-  .score-number { font-size: 2.4rem; }
-}
-@media (max-width: 480px) {
-  .reviews-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
-  .review-card { padding: 18px 14px; }
-  .reviewer-avatar { width: 34px; height: 34px; font-size: 0.85rem; }
-  .reviewer-name { font-size: 0.8rem; }
-  .review-text { font-size: 0.88rem; }
-  .google-icon-badge { width: 16px; height: 16px; }
-}
-@media (max-width: 380px) {
-  .reviews-grid { grid-template-columns: 1fr; }
+  .reviews-header { margin-bottom: 32px; }
+  .google-summary { padding: 22px 18px; margin-bottom: 32px; }
+  .google-summary-left { flex-direction: column; gap: 14px; }
+  .score-number { font-size: 2.6rem; }
+  .review-card { padding: 22px 20px; }
+  .review-text { font-size: 1rem; line-height: 1.65; }
+  .reviewer-name { font-size: 0.9rem; }
 }
 
 
@@ -1599,10 +1641,13 @@ footer::before {
 
 @media (max-width: 600px) {
   .cookie-banner {
-    left: 14px; right: 14px; bottom: 14px; max-width: none;
+    left: 14px; right: 14px; bottom: 90px; max-width: none;
     padding: 14px 16px; gap: 12px;
+    flex-wrap: wrap;
   }
-  .cookie-text { font-size: 0.74rem; }
+  .cookie-text { font-size: 0.74rem; flex: 1 1 100%; }
+  .cookie-actions { flex: 1 1 100%; }
+  .cookie-btn { width: 100%; padding: 11px 16px; }
 }
 
 

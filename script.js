@@ -178,50 +178,80 @@ function toggleGallery(btn) {
 }
 
 function openImageModal(src) {
-  // Create modal
+  // Build the list of gallery images so we can navigate / swipe between them
+  const galleryImgs = Array.from(document.querySelectorAll('.gallery-tile img'));
+  const sources = galleryImgs.map(i => i.getAttribute('src'));
+  let index = sources.indexOf(src);
+  if (index === -1) { sources.length = 0; sources.push(src); index = 0; }
+
   const modal = document.createElement('div');
   modal.className = 'image-modal';
-  modal.style.cssText = `
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0,0,0,0.95);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
-    cursor: pointer;
-    animation: fadeIn 0.3s ease;
+  modal.innerHTML = `
+    <button class="im-close" aria-label="Close">&times;</button>
+    <button class="im-nav im-prev" aria-label="Previous">&#10094;</button>
+    <img class="im-img" src="${sources[index]}" alt="">
+    <button class="im-nav im-next" aria-label="Next">&#10095;</button>
+    <div class="im-counter"></div>
   `;
-
-  const img = document.createElement('img');
-  img.src = src;
-  img.style.cssText = `
-    max-width: 90%;
-    max-height: 90%;
-    border-radius: 8px;
-    animation: zoomIn 0.4s ease;
-  `;
-
-  modal.appendChild(img);
   document.body.appendChild(modal);
+  document.body.style.overflow = 'hidden';
 
-  // Close modal on click
-  modal.addEventListener('click', function() {
-    this.style.animation = 'fadeOut 0.3s ease';
-    setTimeout(() => this.remove(), 300);
-  });
+  const imgEl = modal.querySelector('.im-img');
+  const counter = modal.querySelector('.im-counter');
+  const multiple = sources.length > 1;
+  modal.querySelector('.im-prev').style.display = multiple ? '' : 'none';
+  modal.querySelector('.im-next').style.display = multiple ? '' : 'none';
 
-  // Close on ESC key
-  const escHandler = (e) => {
-    if (e.key === 'Escape' && document.querySelector('.image-modal')) {
-      document.querySelector('.image-modal').remove();
-      document.removeEventListener('keydown', escHandler);
+  function render() {
+    imgEl.style.animation = 'none';
+    void imgEl.offsetWidth;            // restart animation
+    imgEl.style.animation = 'zoomIn 0.35s ease';
+    imgEl.src = sources[index];
+    counter.textContent = multiple ? `${index + 1} / ${sources.length}` : '';
+  }
+  function go(step) {
+    index = (index + step + sources.length) % sources.length;
+    render();
+  }
+  function close() {
+    modal.style.animation = 'fadeOut 0.3s ease';
+    document.body.style.overflow = '';
+    document.removeEventListener('keydown', onKey);
+    setTimeout(() => modal.remove(), 280);
+  }
+
+  render();
+
+  // Controls
+  modal.querySelector('.im-close').addEventListener('click', e => { e.stopPropagation(); close(); });
+  modal.querySelector('.im-prev').addEventListener('click', e => { e.stopPropagation(); go(-1); });
+  modal.querySelector('.im-next').addEventListener('click', e => { e.stopPropagation(); go(1); });
+  imgEl.addEventListener('click', e => e.stopPropagation());
+  // Click backdrop closes
+  modal.addEventListener('click', close);
+
+  // Keyboard
+  function onKey(e) {
+    if (e.key === 'Escape') close();
+    else if (e.key === 'ArrowLeft' && multiple) go(-1);
+    else if (e.key === 'ArrowRight' && multiple) go(1);
+  }
+  document.addEventListener('keydown', onKey);
+
+  // Swipe (touch)
+  let startX = 0, startY = 0, swiping = false;
+  imgEl.addEventListener('touchstart', e => {
+    startX = e.touches[0].clientX; startY = e.touches[0].clientY; swiping = true;
+  }, { passive: true });
+  imgEl.addEventListener('touchend', e => {
+    if (!swiping) return;
+    swiping = false;
+    const dx = e.changedTouches[0].clientX - startX;
+    const dy = e.changedTouches[0].clientY - startY;
+    if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) && multiple) {
+      go(dx < 0 ? 1 : -1);
     }
-  };
-  document.addEventListener('keydown', escHandler);
+  }, { passive: true });
 }
 
 /* Add animations to CSS */
