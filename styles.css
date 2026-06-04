@@ -847,14 +847,24 @@ a { text-decoration: none; }
 
 .specials-inner { position: relative; z-index: 2; max-width: 1200px; margin: 0 auto; }
 
-.specials-header { text-align: center; margin-bottom: 56px; }
+.specials-header { text-align: center; margin-bottom: 56px; max-width: 620px; margin-left: auto; margin-right: auto; }
 .specials-header .eyebrow {
-  font-family: 'DM Sans', sans-serif; font-size: 0.68rem;
-  letter-spacing: 0.38em; text-transform: uppercase;
-  color: var(--teal-mid); margin-bottom: 12px; display: block;
+  font-family: 'DM Sans', sans-serif; font-size: 0.78rem;
+  font-weight: 600; letter-spacing: 0.34em; text-transform: uppercase;
+  color: var(--gold); margin-bottom: 14px; display: inline-flex;
+  align-items: center; gap: 12px;
+}
+.specials-header .eyebrow::before,
+.specials-header .eyebrow::after {
+  content: ''; width: 26px; height: 1.5px; background: var(--gold); opacity: 0.6;
 }
 .specials-header .section-title { color: var(--teal-deep); margin: 0; }
 .specials-header .section-title em { color: var(--gold) !important; }
+.specials-header .specials-subtitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.12rem; color: var(--text-mid); line-height: 1.7;
+  margin-top: 14px;
+}
 
 .specials-grid {
   display: grid; grid-template-columns: repeat(4, 1fr); gap: 22px;
@@ -928,6 +938,8 @@ a { text-decoration: none; }
   .card-name { font-size: 1rem; }
   .card-text { font-size: 0.82rem; line-height: 1.5; }
   .specials-header { margin-bottom: 40px; }
+  .specials-header .eyebrow { font-size: 0.7rem; letter-spacing: 0.28em; }
+  .specials-header .specials-subtitle { font-size: 1.02rem; }
 }
 @media (max-width: 400px) {
   .specials-grid { grid-template-columns: 1fr; }
