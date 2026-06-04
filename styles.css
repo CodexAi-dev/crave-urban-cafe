@@ -1572,12 +1572,34 @@ footer::before {
 .info-value { font-family: 'DM Sans', sans-serif; font-size: 0.92rem; font-weight: 500; color: var(--text-dark); line-height: 1.6; }
 
 /* Social icons in Find Us section */
-.contact-social { margin-top: 12px; gap: 10px; }
-.contact-social .social-link {
-  background: var(--cream-dark);
-  border-color: rgba(13,74,71,0.12);
-  color: var(--teal-deep);
+/* Phone hotline tag */
+.phone-tag {
+  display: inline-block;
+  font-family: 'DM Sans', sans-serif; font-size: 0.58rem; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--teal-deep); background: var(--gold);
+  padding: 2px 8px; border-radius: 50px; margin-left: 6px;
+  vertical-align: middle;
 }
+
+/* Social pills (label + icon) */
+.social-pills {
+  display: flex; flex-wrap: wrap; gap: 9px; margin-top: 10px;
+}
+.social-pill {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: 'DM Sans', sans-serif; font-size: 0.74rem; font-weight: 600;
+  color: var(--teal-deep); text-decoration: none;
+  background: var(--cream-dark); border: 1px solid rgba(13,74,71,0.1);
+  padding: 8px 14px; border-radius: 50px;
+  transition: var(--transition);
+}
+.social-pill svg { width: 15px; height: 15px; flex-shrink: 0; }
+.social-pill:hover { transform: translateY(-2px); color: #fff; border-color: transparent; box-shadow: var(--shadow-sm); }
+.social-pill.sl-fb:hover { background: #1877F2; }
+.social-pill.sl-ig:hover { background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); }
+.social-pill.sl-tt:hover { background: #000; }
+.social-pill.sl-ta:hover { background: #34E0A1; color: #003b2e; }
 
 /* Hours column */
 .contact-hours h3 {
