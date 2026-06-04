@@ -151,7 +151,6 @@ a { text-decoration: none; }
 }
 .mobile-menu.active { max-height: 420px; }
 .mobile-nav-links { display: flex; flex-direction: column; list-style: none; padding: 12px 0 24px; }
-.mobile-nav-links li { }
 .mobile-nav-links a {
   display: block; padding: 15px 32px;
   font-family: 'DM Sans', sans-serif;
@@ -1517,6 +1516,14 @@ footer::before {
   color: var(--teal-mid); margin-bottom: 4px; font-weight: 600;
 }
 .info-value { font-family: 'DM Sans', sans-serif; font-size: 0.92rem; font-weight: 500; color: var(--text-dark); line-height: 1.6; }
+
+/* Social icons in Find Us section */
+.contact-social { margin-top: 12px; gap: 10px; }
+.contact-social .social-link {
+  background: var(--cream-dark);
+  border-color: rgba(13,74,71,0.12);
+  color: var(--teal-deep);
+}
 
 /* Hours column */
 .contact-hours h3 {
