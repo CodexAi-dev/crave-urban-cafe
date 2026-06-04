@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crave – The Urban Café | Negombo</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     NAVIGATION BAR
+═══════════════════════════════════════════════════════════════ -->
+<nav class="navbar">
+  <a class="nav-logo" href="index.html">
+    <img src="Images/CRAVE LOGO PNG (1).png" alt="Crave Logo">
+   
+  </a>
+
+  <!-- Desktop Links -->
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="story.html">Our Story</a></li>
+    <li><a href="menu.html">Menu</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+
+  <a class="nav-contact" href="tel:0777757283">
+    <span>☎</span> 0777757283
+  </a>
+
+  <!-- Mobile Hamburger Menu -->
+  <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul class="mobile-nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="story.html">Our Story</a></li>
+      <li><a href="menu.html">Menu</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="tel:0777757283" class="mobile-contact">☎ 0777757283</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     HERO SECTION
+═══════════════════════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  
+  <div class="hero-content">
+    <div class="hero-text-wrapper">
+      <p class="hero-eyebrow">WELCOME TO NEGOMBO'S FINEST CAFÉ</p>
+      
+      <h1 class="hero-title">
+        Crave<span class="title-accent">.</span><br>
+        <span class="hero-subtitle-main">The Urban Café Experience</span>
+      </h1>
+      
+      <p class="hero-description">
+        At Crave, great coffee and city energy come together in the heart of Negombo. Enjoy artisan brews, authentic flavors, and a welcoming atmosphere designed for good conversations and memorable moments. Every visit is made to be savored.
+      </p>
+      
+      <div class="hero-cta-group">
+        <a href="contact.html" class="btn-primary">Reserve a Table</a>
+        <a href="menu.html" class="btn-secondary">View Our Menu</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-scroll">
+    <span>Discover More</span>
+    <div class="scroll-indicator">
+      <div class="scroll-dot"></div>
+      <div class="scroll-dot"></div>
+      <div class="scroll-dot"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     FEATURES STRIP
+═══════════════════════════════════════════════════════════════ -->
+<div class="features-strip">
+  <div class="feature-item">
+    <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+      <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+      <circle cx="12" cy="9" r="2.5"/>
+    </svg>
+    <span class="feature-text">Urban Negombo</span>
+  </div>
+  <div class="feature-divider"></div>
+  <div class="feature-item">
+    <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+      <path d="M18 8h1a4 4 0 0 1 0 8h-1"/>
+      <path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/>
+    </svg>
+    <span class="feature-text">Specialty Brews</span>
+  </div>
+  <div class="feature-divider"></div>
+  <div class="feature-item">
+    <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+    </svg>
+    <span class="feature-text">Tropical Ambience</span>
+  </div>
+  <div class="feature-divider"></div>
+  <div class="feature-item">
+    <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+    </svg>
+    <span class="feature-text">Halal Certified</span>
+  </div>
+  <div class="feature-divider"></div>
+  <div class="feature-item">
+    <svg class="feature-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+      <circle cx="12" cy="12" r="10"/>
+      <polyline points="12 6 12 12 16 14"/>
+    </svg>
+    <span class="feature-text">Open Daily 8am – 11pm</span>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     THE CRAVE EXPERIENCE SECTION
+═══════════════════════════════════════════════════════════════ -->
+<section style="background: var(--cream); padding: 0;">
+  <div class="ambience-section">
+    <div class="ambience-visual">
+      <img src="images/Crave_inside.webp" alt="Crave Experience" class="ambience-image">
+    </div>
+    <div class="ambience-text">
+      <p class="eyebrow">The Crave Experience</p>
+      <h2 class="section-title">More than a café —<br>a <em>state of mind</em></h2>
+      <p class="body-text">
+        Nestled in the heart of Negombo, Crave – The Urban Café is a sanctuary where lush tropical greenery meets sophisticated urban energy. We craft spaces that invite you to linger, connect, and savour every moment. Our carefully curated menu celebrates local flavours while embracing global culinary traditions, ensuring that every visit is a journey of discovery.
+      </p>
+      <p class="body-text">
+        Whether you're catching up with friends over cold brew, working through the afternoon with our signature flat white, or celebrating a special occasion — Crave is your home away from home. We believe in creating an atmosphere where conversations flow freely, creativity blooms, and memories are made over exceptional food and drink.
+      </p>
+      <a href="story.html" class="btn-primary" style="display: inline-block; margin-top: 12px;">Discover Our Story</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     GALLERY GRID
+═══════════════════════════════════════════════════════════════ -->
+<section class="gallery-section">
+  <div class="gallery-header">
+    <p class="eyebrow">Visual Journey</p>
+    <h2 class="section-title">Gallery & <em>Ambience</em></h2>
+    <p>Take a glimpse into the warm, inviting spaces and delicious moments that define Crave.</p>
+  </div>
+
+  <div class="gallery-grid" id="galleryGrid">
+    <figure class="gallery-tile" onclick="openImageModal('Images/cafe-interior.webp')"><img src="Images/cafe-interior.webp" alt="Crave café interior" loading="lazy"></figure>
+    <figure class="gallery-tile" onclick="openImageModal('Images/club-sandwich-platter.webp')"><img src="Images/club-sandwich-platter.webp" alt="Club sandwich platter" loading="lazy"></figure>
+    <figure class="gallery-tile" onclick="openImageModal('Images/burger-milkshake.webp')"><img src="Images/burger-milkshake.webp" alt="Burger and milkshake" loading="lazy"></figure>
+    <figure class="gallery-tile" onclick="openImageModal('Images/signature-latte.webp')"><img src="Images/signature-latte.webp" alt="Signature latte" loading="lazy"></figure>
+    <figure class="gallery-tile" onclick="openImageModal('Images/crave-brand-wall.webp')"><img src="Images/crave-brand-wall.webp" alt="Crave brand wall" loading="lazy"></figure>
+    <figure class="gallery-tile" onclick="openImageModal('Images/dessert-display.webp')"><img src="Images/dessert-display.webp" alt="Dessert display" loading="lazy"></figure>
+    <figure class="gallery-tile" onclick="openImageModal('Images/toasted-sandwiches.webp')"><img src="Images/toasted-sandwiches.webp" alt="Toasted sandwiches" loading="lazy"></figure>
+    <figure class="gallery-tile" onclick="openImageModal('Images/gourmet-hot-dogs.webp')"><img src="Images/gourmet-hot-dogs.webp" alt="Gourmet hot dogs" loading="lazy"></figure>
+    <figure class="gallery-tile gallery-hidden" onclick="openImageModal('Images/espresso-shot.webp')"><img src="Images/espresso-shot.webp" alt="Espresso shot" loading="lazy"></figure>
+    <figure class="gallery-tile gallery-hidden" onclick="openImageModal('Images/reading-nook.webp')"><img src="Images/reading-nook.webp" alt="Reading nook" loading="lazy"></figure>
+    <figure class="gallery-tile gallery-hidden" onclick="openImageModal('Images/hot-dog-shake.webp')"><img src="Images/hot-dog-shake.webp" alt="Hot dog and shake" loading="lazy"></figure>
+    <figure class="gallery-tile gallery-hidden" onclick="openImageModal('Images/burger-cafe-backdrop.webp')"><img src="Images/burger-cafe-backdrop.webp" alt="Burger with café backdrop" loading="lazy"></figure>
+    <figure class="gallery-tile gallery-hidden" onclick="openImageModal('Images/book-food-flatlay.webp')"><img src="Images/book-food-flatlay.webp" alt="Book and food flatlay" loading="lazy"></figure>
+    <figure class="gallery-tile gallery-hidden" onclick="openImageModal('Images/wrap-platter-drinks.webp')"><img src="Images/wrap-platter-drinks.webp" alt="Wrap platter with drinks" loading="lazy"></figure>
+    <figure class="gallery-tile gallery-hidden" onclick="openImageModal('Images/pasta-bowl.webp')"><img src="Images/pasta-bowl.webp" alt="Pasta bowl" loading="lazy"></figure>
+    <figure class="gallery-tile gallery-hidden" onclick="openImageModal('Images/big-breakfast-platter.webp')"><img src="Images/big-breakfast-platter.webp" alt="Big breakfast platter" loading="lazy"></figure>
+    <figure class="gallery-tile gallery-hidden" onclick="openImageModal('Images/cozy-corner-guitar.webp')"><img src="Images/cozy-corner-guitar.webp" alt="Cozy corner with guitar" loading="lazy"></figure>
+    <figure class="gallery-tile gallery-hidden" onclick="openImageModal('Images/lunch-for-two.webp')"><img src="Images/lunch-for-two.webp" alt="Lunch for two" loading="lazy"></figure>
+  </div>
+
+  <div class="gallery-more-wrap">
+    <button class="gallery-more-btn" id="galleryMoreBtn" onclick="toggleGallery(this)">
+      <span class="more-text">See More</span>
+      <svg class="more-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </button>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     THANK YOU MESSAGE
+═══════════════════════════════════════════════════════════════ -->
+<section class="thankyou-section">
+  <span class="ty-heart">♥</span>
+  <h2 class="ty-title">Thank You for Making <em>Memories</em> With Us</h2>
+  <p class="ty-text">To everyone who has shared a moment with us — thank you for being part of the Crave story.</p>
+  <p class="ty-signature">— With love, The Crave Family</p>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     CAFÉ SIGNATURES
+═══════════════════════════════════════════════════════════════ -->
+<section class="specials-section">
+  <div class="specials-inner">
+    <div class="specials-header">
+      <p class="eyebrow">Our Signature Collection</p>
+      <h2 class="section-title">Crave <em style="font-style:italic; color: var(--gold-light);">Specials</em></h2>
+    </div>
+    <div class="specials-grid">
+      <!-- Mojito Card -->
+      <div class="card-item">
+        <div class="card-image">
+          <img src="Images/Crave_Special_Mojito1.webp" alt="Crave Special Mojito">
+        </div>
+        <div class="card-content">
+          <div class="card-tag">Beverage</div>
+          <h3 class="card-name">Crave Special Mojito</h3>
+          <p class="card-note">Bold & Refreshing</p>
+          <p class="card-text">Fresh lime, mint leaves, espresso, mint syrup, Sprite, and soda over ice.</p>
+        </div>
+      </div>
+      
+      <!-- Iced Tea Card -->
+      <div class="card-item">
+        <div class="card-image">
+          <img src="Images/special-iced-tea.webp" alt="Crave Special Iced Tea">
+        </div>
+        <div class="card-content">
+          <div class="card-tag">Beverage</div>
+          <h3 class="card-name">Crave Special Iced Tea</h3>
+          <p class="card-note">Creamy & Smooth</p>
+          <p class="card-text">Black tea, milk powder, Nutella, sugar, and ice in perfect harmony.</p>
+        </div>
+      </div>
+      
+      <!-- Milkshake Card -->
+      <div class="card-item">
+        <div class="card-image">
+          <img src="Images/signature-latte.webp" alt="Crave Special Milkshake">
+        </div>
+        <div class="card-content">
+          <div class="card-tag">Beverage</div>
+          <h3 class="card-name">Crave Special Milkshake</h3>
+          <p class="card-note">Indulgent & Creamy</p>
+          <p class="card-text">Vanilla and chocolate layers with cashew pieces and caramel drizzle.</p>
+        </div>
+      </div>
+      
+      <!-- Burger Card -->
+      <div class="card-item">
+        <div class="card-image">
+          <img src="Images/special-burger.webp" alt="Crave Special Burger">
+        </div>
+        <div class="card-content">
+          <div class="card-tag">Food</div>
+          <h3 class="card-name">Crave Special Burger</h3>
+          <p class="card-note">Fully Loaded</p>
+          <p class="card-text">Crispy chicken, omelette, bacon, cheese, and vegetables in buttery bun.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     GOOGLE REVIEWS SECTION
+═══════════════════════════════════════════════════════════════ -->
+<section class="reviews-section">
+  <div class="reviews-inner">
+
+    <!-- Header -->
+    <div class="reviews-header">
+      <p class="eyebrow">Guest Testimonials</p>
+      <h2 class="section-title">Loved by <em>Visitors</em></h2>
+    </div>
+
+    <!-- Google Rating Summary Bar -->
+    <div class="google-summary">
+      <div class="google-summary-left">
+        <svg class="google-logo-full" viewBox="0 0 74 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9.24 8.19v2.46h5.88c-.18 1.38-.64 2.39-1.34 3.1-.86.86-2.2 1.8-4.54 1.8-3.62 0-6.45-2.92-6.45-6.54s2.83-6.54 6.45-6.54c1.95 0 3.38.77 4.43 1.76L15.4 2.5C13.94 1.08 11.98 0 9.24 0 4.28 0 .11 4.04.11 9s4.17 9 9.13 9c2.68 0 4.7-.88 6.28-2.52 1.62-1.62 2.13-3.91 2.13-5.75 0-.57-.04-1.1-.13-1.54H9.24z" fill="#4285F4"/>
+          <path d="M25 6.19c-3.21 0-5.83 2.44-5.83 5.81 0 3.34 2.62 5.81 5.83 5.81s5.83-2.46 5.83-5.81c0-3.37-2.62-5.81-5.83-5.81zm0 9.33c-1.76 0-3.28-1.45-3.28-3.52 0-2.09 1.52-3.52 3.28-3.52s3.28 1.43 3.28 3.52c0 2.07-1.52 3.52-3.28 3.52z" fill="#EA4335"/>
+          <path d="M53.58 7.49h-.09c-.57-.68-1.67-1.3-3.06-1.3C47.53 6.19 45 8.72 45 12c0 3.26 2.53 5.81 5.43 5.81 1.39 0 2.49-.62 3.06-1.32h.09v.83c0 2.22-1.19 3.41-3.1 3.41-1.56 0-2.53-1.12-2.93-2.07l-2.22.92c.64 1.54 2.33 3.43 5.15 3.43 2.99 0 5.52-1.76 5.52-6.05V6.49h-2.42v1zm-2.93 8.03c-1.76 0-3.1-1.5-3.1-3.52 0-2.05 1.34-3.52 3.1-3.52 1.74 0 3.1 1.49 3.1 3.54.01 2.03-1.36 3.5-3.1 3.5z" fill="#4285F4"/>
+          <path d="M38 6.19c-3.21 0-5.83 2.44-5.83 5.81 0 3.34 2.62 5.81 5.83 5.81s5.83-2.46 5.83-5.81c0-3.37-2.62-5.81-5.83-5.81zm0 9.33c-1.76 0-3.28-1.45-3.28-3.52 0-2.09 1.52-3.52 3.28-3.52s3.28 1.43 3.28 3.52c0 2.07-1.52 3.52-3.28 3.52z" fill="#FBBC05"/>
+          <path d="M58 .24h2.51v17.57H58z" fill="#34A853"/>
+          <path d="M63.41 14.37c.66 1.64 1.8 2.44 3.35 2.44 1.56 0 2.49-.79 2.49-1.83 0-.98-.56-1.54-2.28-2.09l-1.28-.42c-2.09-.68-3.21-1.83-3.21-3.63 0-2.18 1.8-3.65 4.15-3.65 1.97 0 3.38.88 4.06 2.31l-2.01 1.08c-.36-.81-1.06-1.3-2.07-1.3s-1.83.55-1.83 1.47c0 .88.55 1.3 1.97 1.78l1.17.38c2.35.77 3.56 1.91 3.56 3.87 0 2.31-1.8 3.87-4.62 3.87-2.46 0-4.26-1.26-4.98-3.17l2.53-1.11z" fill="#EA4335"/>
+        </svg>
+        <div class="google-rating-score">
+          <span class="score-number">4.9</span>
+          <div class="score-stars">★★★★★</div>
+          <a class="score-label" href="https://www.google.com/search?sca_esv=cb596a67502e2f5f&cs=1&output=search&kgmid=%2Fg%2F11xkdhgdgt&q=Crave&shem=dlvsc%2Crimspwouoe&shndl=30&source=sh%2Fx%2Floc%2Funi%2Fm1%2F1&kgs=ecfc219bd1ecc070" target="_blank" rel="noopener">156 Google Reviews</a>
+        </div>
+      </div>
+      <div class="google-summary-divider"></div>
+      <div class="google-summary-right">
+        <div class="rating-bar-row"><span class="bar-label">5★</span><div class="bar-track"><div class="bar-fill" style="width:96%"></div></div></div>
+        <div class="rating-bar-row"><span class="bar-label">4★</span><div class="bar-track"><div class="bar-fill" style="width:3%"></div></div></div>
+        <div class="rating-bar-row"><span class="bar-label">3★</span><div class="bar-track"><div class="bar-fill" style="width:1%"></div></div></div>
+        <div class="rating-bar-row"><span class="bar-label">2★</span><div class="bar-track"><div class="bar-fill" style="width:0%"></div></div></div>
+        <div class="rating-bar-row"><span class="bar-label">1★</span><div class="bar-track"><div class="bar-fill" style="width:1%"></div></div></div>
+      </div>
+    </div>
+
+    <!-- Review Cards -->
+    <div class="reviews-grid">
+
+      <div class="review-card">
+        <div class="review-card-top">
+          <div class="reviewer-avatar" style="background:#4285F4;">L</div>
+          <div class="reviewer-info">
+            <div class="reviewer-name">Lauren Mills</div>
+            <div class="reviewer-meta">
+              <div class="review-stars">★★★★★</div>
+              <span class="review-date">8 months ago</span>
+            </div>
+          </div>
+          <svg class="google-icon-badge" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
+            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+          </svg>
+        </div>
+        <p class="review-text">We had a wonderful experience at Crave. The cafe was exceptionally clean, and the decorations were lovely. The staff were all very friendly and helpful, making us feel welcome from the moment we arrived. The food was delicious, and we especially enjoyed having games available — we had a great time playing snakes and ladders while we ate. A fantastic spot for a relaxing and fun time.</p>
+      </div>
+
+      <div class="review-card">
+        <div class="review-card-top">
+          <div class="reviewer-avatar" style="background:#EA4335;">C</div>
+          <div class="reviewer-info">
+            <div class="reviewer-name">Carol Pateiro</div>
+            <div class="reviewer-meta">
+              <div class="review-stars">★★★★★</div>
+              <span class="review-date">5 months ago</span>
+            </div>
+          </div>
+          <svg class="google-icon-badge" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
+            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+          </svg>
+        </div>
+        <p class="review-text">The waiters were incredibly friendly and kind. I shared music and conversation with them, and they made me feel very welcome in Sri Lanka. Thanks to people like them, the world is a better place.</p>
+      </div>
+
+      <div class="review-card">
+        <div class="review-card-top">
+          <div class="reviewer-avatar" style="background:#34A853;">M</div>
+          <div class="reviewer-info">
+            <div class="reviewer-name">Mala Jeca</div>
+            <div class="reviewer-meta">
+              <div class="review-stars">★★★★★</div>
+              <span class="review-date">Local Guide · 3 months ago</span>
+            </div>
+          </div>
+          <svg class="google-icon-badge" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
+            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+          </svg>
+        </div>
+        <p class="review-text">It's cozy, air-conditioned, the food is great and the coffee excellent! We had a submarine sandwich and the waiter informed us about all the details with so much attention. We loved the service because the workers are the sweetest people in the city ❤️ they've helped us with everything we asked for with a big smile. Thank you guys again!</p>
+      </div>
+
+      <div class="review-card">
+        <div class="review-card-top">
+          <div class="reviewer-avatar" style="background:#FBBC05;">H</div>
+          <div class="reviewer-info">
+            <div class="reviewer-name">Holly Pierce</div>
+            <div class="reviewer-meta">
+              <div class="review-stars">★★★★★</div>
+              <span class="review-date">Local Guide · 5 months ago</span>
+            </div>
+          </div>
+          <svg class="google-icon-badge" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
+            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+          </svg>
+        </div>
+        <p class="review-text">Lovely coffee shop in Negombo. Good coffee, reasonable prices. Also has a few board games to play, so played snakes & ladders & chess. Great place if you want good coffee or are looking to kill some time before a flight like us. Staff were super friendly.</p>
+      </div>
+
+      <div class="review-card">
+        <div class="review-card-top">
+          <div class="reviewer-avatar" style="background:#9c27b0;">M</div>
+          <div class="reviewer-info">
+            <div class="reviewer-name">Mehran Kwakernaak</div>
+            <div class="reviewer-meta">
+              <div class="review-stars">★★★★★</div>
+              <span class="review-date">7 months ago</span>
+            </div>
+          </div>
+          <svg class="google-icon-badge" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
+            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+          </svg>
+        </div>
+        <p class="review-text">Crave Café in Negombo is one of those places that instantly makes you feel good. The atmosphere is calm, stylish, and filled with positive vibes. Their food is absolutely delicious and the coffee is top-notch — smooth, aromatic, and made just right. What makes Crave stand out most is their amazing service. If you're ever in Negombo, this is definitely a must-visit café!</p>
+      </div>
+
+      <div class="review-card">
+        <div class="review-card-top">
+          <div class="reviewer-avatar" style="background:#0d4a47;">F</div>
+          <div class="reviewer-info">
+            <div class="reviewer-name">Fran C</div>
+            <div class="reviewer-meta">
+              <div class="review-stars">★★★★★</div>
+              <span class="review-date">Local Guide · 2 months ago</span>
+            </div>
+          </div>
+          <svg class="google-icon-badge" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+            <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+            <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
+            <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+          </svg>
+        </div>
+        <p class="review-text">I only had an iced cappuccino so I can't say much about the other food, but the drink was lovely. The cafe provided air-conditioned comfort and comfy chairs — exactly what I needed after walking around in the hot sun. I didn't find any other nice coffee options in the vicinity.</p>
+      </div>
+
+    </div>
+
+    <!-- View on Google link -->
+    <div class="google-view-all">
+      <a href="https://www.google.com/search?sca_esv=cb596a67502e2f5f&cs=1&output=search&kgmid=%2Fg%2F11xkdhgdgt&q=Crave&shem=dlvsc%2Crimspwouoe&shndl=30&source=sh%2Fx%2Floc%2Funi%2Fm1%2F1&kgs=ecfc219bd1ecc070" target="_blank" rel="noopener" class="google-view-btn">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" width="18" height="18">
+          <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+          <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+          <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/>
+          <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
+        </svg>
+        View all reviews on Google
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     CTA BANNER
+═══════════════════════════════════════════════════════════════ -->
+<section class="cta-banner">
+  <p class="cta-eyebrow">Join Us Today</p>
+  <h2 class="cta-title">Ready to <em style="font-style:italic; color:var(--leaf-green);">Crave</em> something?</h2>
+  <p class="cta-subtitle">Reserve your table or just walk in. Treat yourself to an experience worth craving.</p>
+  <a href="contact.html" class="btn-primary">Make a Reservation</a>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════════════════════════ -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="logo">Crave</div>
+      <div class="tagline">The Urban Café</div>
+      <p>A café born from the love of good food, bold flavours, and the belief that every moment deserves to be savoured. Negombo's most treasured gathering place.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navigate</h4>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="story.html">Our Story</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Visit</h4>
+      <ul>
+        <li><a href="https://maps.google.com/?q=49/A+St+Joseph's+St,+Negombo+11500" target="_blank" rel="noopener">49/A St Joseph's St, Negombo</a></li>
+        <li><a href="#">Open Daily</a></li>
+        <li><a href="#">8am – 11pm</a></li>
+        <li><a href="tel:0777757283">0777757283</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Follow Us</h4>
+      <ul class="social-links">
+        <li><a class="social-link sl-fb" title="Facebook" href="https://web.facebook.com/cravetheurbancafe/" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07c0 6.02 4.39 11.01 10.13 11.93v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.96.93-1.96 1.89v2.25h3.33l-.53 3.49h-2.8V24C19.61 23.08 24 18.09 24 12.07z"/></svg>
+        </a></li>
+        <li><a class="social-link sl-ig" title="Instagram" href="https://www.instagram.com/yourcravingcovered/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63c-.79.3-1.46.72-2.12 1.38C1.35 2.68.94 3.35.63 4.14.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91.3.79.72 1.46 1.38 2.12.66.66 1.33 1.08 2.12 1.38.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56.79-.3 1.46-.72 2.12-1.38.66-.66 1.08-1.33 1.38-2.12.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91-.3-.79-.72-1.46-1.38-2.12C21.32 1.35 20.65.94 19.86.63 19.1.33 18.22.13 16.95.07 15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.41-10.85a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/></svg>
+        </a></li>
+        <li><a class="social-link sl-tt" title="TikTok" href="https://www.tiktok.com/@yourcravingcovered" target="_blank" rel="noopener" aria-label="TikTok">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64c.3 0 .59.04.86.13V9.4a6.33 6.33 0 0 0-1-.08A6.34 6.34 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1.04-.1z"/></svg>
+        </a></li>
+        <li><a class="social-link sl-ta" title="TripAdvisor" href="https://www.tripadvisor.com/Restaurant_Review-g297897-d33270366-Reviews-Crave_The_Urban_Cafe-Negombo_Western_Province.html" target="_blank" rel="noopener" aria-label="TripAdvisor">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 4.5c-3.13 0-6.02.86-8.3 2.3H0l1.86 2.02A5.07 5.07 0 0 0 5.2 17.5a5.05 5.05 0 0 0 3.45-1.36L12 19.5l3.35-3.35a5.05 5.05 0 0 0 3.45 1.35 5.07 5.07 0 0 0 3.43-8.78L24 6.8h-3.7A15.07 15.07 0 0 0 12 4.5zm0 1.6c1.85 0 3.6.3 5.16.84A5.08 5.08 0 0 0 14.1 12.5c0 .27.02.53.06.78L12 15.43l-2.16-2.15c.04-.25.06-.51.06-.78a5.08 5.08 0 0 0-3.07-5.56A14.9 14.9 0 0 1 12 6.1zM5.2 8.95a3.48 3.48 0 1 1 0 6.95 3.48 3.48 0 0 1 0-6.95zm13.6 0a3.48 3.48 0 1 1 0 6.95 3.48 3.48 0 0 1 0-6.95zM5.2 10.7a1.72 1.72 0 1 0 0 3.45 1.72 1.72 0 0 0 0-3.45zm13.6 0a1.72 1.72 0 1 0 0 3.45 1.72 1.72 0 0 0 0-3.45z"/></svg>
+        </a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>© 2025 Crave – The Urban Café. All rights reserved.</p>
+    <p>49/A St Joseph's St, Negombo 11500</p>
+  </div>
+</footer>
+
+<!-- Cookie Consent Banner -->
+<div class="cookie-banner" id="cookieBanner">
+  <span class="cookie-icon">🍪</span>
+  <p class="cookie-text">We use cookies to give you a smoother browsing experience. By staying, you're happy with that.</p>
+  <div class="cookie-actions">
+    <button class="cookie-btn cookie-accept" onclick="acceptCookies()">Got it</button>
+  </div>
+</div>
+
+<!-- WhatsApp Floating Button -->
+<div class="whatsapp-float">
+  <span class="whatsapp-tooltip">Chat with us on WhatsApp</span>
+  <a class="whatsapp-btn" href="https://wa.me/94777757283" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M16 3C8.82 3 3 8.82 3 16c0 2.3.6 4.47 1.64 6.35L3 29l6.82-1.62A13 13 0 0 0 16 29c7.18 0 13-5.82 13-13S23.18 3 16 3z" fill="#fff"/>
+      <path d="M16 5.5A10.5 10.5 0 0 0 7.04 21.3l.28.45-1.19 4.34 4.46-1.17.44.26A10.5 10.5 0 1 0 16 5.5z" fill="#25D366"/>
+      <path d="M12.3 10.2c-.27-.6-.55-.61-.81-.62l-.69-.01c-.24 0-.62.09-.94.46-.33.37-1.25 1.22-1.25 2.98s1.28 3.45 1.46 3.69c.18.24 2.47 3.93 6.07 5.35 3 1.19 3.61.95 4.26.89.65-.06 2.1-.86 2.4-1.69.3-.83.3-1.54.21-1.69-.09-.15-.33-.24-.69-.42-.36-.18-2.1-1.04-2.43-1.16-.33-.12-.57-.18-.81.18-.24.36-.93 1.16-1.14 1.4-.21.24-.42.27-.78.09-.36-.18-1.52-.56-2.9-1.79-1.07-.96-1.79-2.14-2-2.5-.21-.36-.02-.55.16-.73.16-.16.36-.42.54-.63.18-.21.24-.36.36-.6.12-.24.06-.45-.03-.63-.09-.18-.79-1.96-1.1-2.67z" fill="#fff"/>
+    </svg>
+  </a>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

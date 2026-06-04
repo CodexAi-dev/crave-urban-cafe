@@ -1,0 +1,10 @@
+# OS / editor
+Thumbs.db
+.DS_Store
+desktop.ini
+.vscode/
+.idea/
+
+# Backups
+*.backup
+index.html.backup
